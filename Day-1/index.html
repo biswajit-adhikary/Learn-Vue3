@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
+</head>
+
+<body>
+    <h1>Hello, Vue :)</h1>
+    <!-- <div id="app">
+        <h2>{{ title }}</h2>
+        <span>Author: {{ author }}</span>
+        <span> - Age: {{ age }}</span>
+        <p>{{ content }}</p>
+        <button v-on:click="age++">Increase The Age</button>
+        <button v-on:click="age--">Decrease The Age</button>
+        <button @click="changeTitle">Change The Title</button>
+    </div> -->
+
+    <div id="app">
+        <div v-if="show">
+            <h2>{{ title }}</h2>
+            <span>Author: {{ author }}</span>
+            <span> - Age: {{ age }}</span>
+            <p>{{ content }}</p>
+        </div>
+        <button @click="toggleData">
+            <span v-if="show">Hide Data</span>
+            <span v-if="!show">Show Data</span>
+        </button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
